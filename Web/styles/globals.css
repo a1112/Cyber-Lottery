@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: #ffffff;
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-primary: #030213;
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.95 0.0058 264.53);
+  --color-secondary-foreground: #030213;
+  --color-muted: #ececf0;
+  --color-muted-foreground: #717182;
+  --color-accent: #e9ebef;
+  --color-accent-foreground: #030213;
+  --color-destructive: #d4183d;
+  --color-destructive-foreground: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-input: transparent;
+  --color-input-background: #f3f3f5;
+  --color-switch-background: #cbced4;
+  --color-ring: oklch(0.708 0 0);
+  --font-size: 16px;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: oklch(0.145 0 0);
+    --card: #ffffff;
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: #030213;
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.95 0.0058 264.53);
+    --secondary-foreground: #030213;
+    --muted: #ececf0;
+    --muted-foreground: #717182;
+    --accent: #e9ebef;
+    --accent-foreground: #030213;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: transparent;
+    --input-background: #f3f3f5;
+    --ring: oklch(0.708 0 0);
+
+    /* === 文字颜色层级 === */
+    --foreground-secondary: #475569;
+    --foreground-tertiary: #94a3b8;
+    --foreground-disabled: #cbd5e1;
+    --foreground-inverse: #ffffff;
+
+    /* === 状态颜色 === */
+    --success: #22c55e;
+    --success-foreground: #ffffff;
+    --warning: #f59e0b;
+    --warning-foreground: #ffffff;
+    --error: #ef4444;
+    --error-foreground: #ffffff;
+    --info: #3b82f6;
+    --info-foreground: #ffffff;
+
+    /* === 交互状态 === */
+    --hover: rgba(0, 0, 0, 0.05);
+    --active: rgba(0, 0, 0, 0.1);
+    --selected: rgba(59, 130, 246, 0.1);
+  }
+
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+
+    /* === 文字颜色层级 === */
+    --foreground-secondary: oklch(0.708 0 0);
+    --foreground-tertiary: oklch(0.55 0 0);
+    --foreground-disabled: oklch(0.35 0 0);
+    --foreground-inverse: oklch(0.145 0 0);
+
+    /* === 状态颜色 === */
+    --success: #22c55e;
+    --success-foreground: #ffffff;
+    --warning: #f59e0b;
+    --warning-foreground: #000000;
+    --error: #ef4444;
+    --error-foreground: #ffffff;
+    --info: #3b82f6;
+    --info-foreground: #ffffff;
+
+    /* === 交互状态 === */
+    --hover: rgba(255, 255, 255, 0.05);
+    --active: rgba(255, 255, 255, 0.1);
+    --selected: rgba(59, 130, 246, 0.2);
+  }
+
+  * {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
