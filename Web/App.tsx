@@ -46,7 +46,7 @@ interface Winner {
   prize?: string;
 }
 
-interface Prize {
+export interface Prize {
   id: string;
   name: string;
   count: number;
@@ -774,7 +774,7 @@ const WinnerModal = ({ winner, prize, onClose, particleColors, celebrationMode, 
     const loadPrizeImages = async () => {
       if (prize) {
         try {
-          const response = await fetch(`/api/prizes?name=${encodeURIComponent(prize)}`);
+          const response = await fetch(`/apps/cyber-lottery/api/prizes?name=${encodeURIComponent(prize)}`);
           const data = await response.json();
           if (data.images && data.images.length > 0) {
             setPrizeImages(data.images);

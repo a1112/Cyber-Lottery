@@ -29,7 +29,7 @@ export async function GET(request: Request) {
     const files = fs.readdirSync(prizesPath);
     const images = files
       .filter(file => file.endsWith('.jpg') || file.endsWith('.png') || file.endsWith('.jpeg'))
-      .map(file => `/prizes/${prizeDir}/${file}`);
+      .map(file => `/apps/cyber-lottery/prizes/${prizeDir}/${file}`);
 
     return NextResponse.json({ images });
   } catch (error) {

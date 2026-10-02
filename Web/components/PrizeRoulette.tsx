@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Prize } from "../../App";
+import type { Prize } from "../App";
 
 interface PrizeRouletteProps {
     active: boolean;
