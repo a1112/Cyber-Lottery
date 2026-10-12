@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "units": {
+    "web": {
+      "canonical": {
+        "path": "Web/package.json",
+        "adapter": "json",
+        "pointer": "/version",
+        "format": "semver"
+      },
+      "mirrors": [
+        {
+          "path": "Web/package-lock.json",
+          "adapter": "json",
+          "pointer": "/packages//version",
+          "format": "semver"
+        },
+        {
+          "path": "Web/package-lock.json",
+          "adapter": "json",
+          "pointer": "/version",
+          "format": "semver"
+        }
+      ],
+      "notes": "Existing package manifest authority; independently selected for changes."
+    }
+  },
+  "notes": "Version adoption preserves all existing version numbers and independent units. No tags/releases are created. See VERSIONING.md for exclusions."
+}
